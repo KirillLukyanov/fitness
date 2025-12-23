@@ -6,7 +6,13 @@
     <title>Vite + React + TS</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="cards-widget"></div>
     <script type="module" src="https://web.fitnesskit-admin.ru/widgets/cards-widget.iife.js"></script>
+    <script>
+      window.cardsWidget?.init({
+        container: document.getElementById("cards-widget"),
+        props: { test: "test" },
+      });
+    </script>
   </body>
 </html>

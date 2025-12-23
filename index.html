@@ -9,9 +9,14 @@
     <div id="cards-widget"></div>
     <script type="module" src="https://web.fitnesskit-admin.ru/widgets/cards-widget.iife.js"></script>
     <script>
-      window.cardsWidget?.init({
-        container: document.getElementById("cards-widget"),
-        props: { test: "test" },
+      document.addEventListener('DOMContentLoaded', () => {
+        window.cardsWidget?.init({
+          container: document.getElementById("cards-widget"),
+          props: {
+            backend_url: "https://olimpia.fitnesskit-admin.ru",
+            club_id: "2"
+          },
+        });
       });
     </script>
   </body>
